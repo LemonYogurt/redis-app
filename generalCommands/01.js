@@ -49,6 +49,11 @@ async.series({
     		done(err, result);
     	});
     },
+    del: function (done) {
+        client.del('goods:goods_id:01:leTing', 'goods:goods_id:02:name', 'goods:goods_id:02:handuyishe', function (err, result) {
+            done(err, result);
+        });
+    },
     select: function (done) {
     	client.select(1, function (err, result) {
     		done(err, result);
