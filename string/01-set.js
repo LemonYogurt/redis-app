@@ -12,7 +12,13 @@ async.series({
 			done(err, result);
 		});
 	},
-	// xx：表示key存在时，执行操作
+	// nx：表示key不存在时，执行操作。
+	setNX: function (done) {
+		client.set('user:userid:05:username', 'redis add', 'nx', function (err, result) {
+			done(err, result);
+		});
+	},
+	// xx：表示key存在时，执行操作，如果nx和xx都没有设置，则默认是xx
 	setXX: function (done) {
 		client.set('user:userid:01:username', 'redis explain', 'xx', function (err, result) {
 			done(err, result);
