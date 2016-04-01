@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "async": "^2.0.0-rc.2",
+    "bson": "^0.4.22",
     "redis": "^2.6.0-0"
   }
 }

@@ -4,7 +4,6 @@ var client = require('../00.js');
 
 /*
 list
-
 */
 async.series({
     del: function (done) {
